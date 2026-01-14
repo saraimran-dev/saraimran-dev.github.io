@@ -3,46 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sara | Portfolio</title>
+  <title>Sara Imran | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar">
       <div class="logo">SARA</div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Contact Me</a></li>
-        <li><a href="#">Pages</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
     <div class="hero-text">
       <h2>Hi there, I am</h2>
-      <h1>Sara</h1>
-      <h3>Freelancer Graphic Designer</h3>
-      <p>I enjoy solving problems with clean, scalable design solutions. Let’s make something beautiful together.</p>
+      <h1>Sara Imran</h1>
+      <h3>Computer Science Student | Data & Design Enthusiast</h3>
+
+      <p>
+        I am a Computer Science student with experience in data analysis,
+        Tableau, Power BI, Canva design, and basic web technologies. I enjoy
+        building clean, user-friendly projects and learning new tools.
+      </p>
+
       <div class="buttons">
         <a href="#contact" class="btn">Contact Me</a>
-        <a href="Sara-CV.pdf" class="btn outline">Download CV</a>
+        <a href="#" class="btn outline">Download CV</a>
       </div>
-    </div>
-    <div class="hero-image">
-      <img src="your-photo.png" alt="Sara portrait" />
     </div>
   </section>
 
+  <!-- QUOTE SECTION -->
   <section class="quote">
     <blockquote>
-      “I enjoy the process of solving problems with a clean and scalable solution. I have a genuine passion for pouring inspiration into designs.”
+      “I enjoy the process of solving problems with clean and scalable
+      solutions. I have a genuine passion for pouring inspiration into
+      designs.”
     </blockquote>
   </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      High School Diploma — Pak-Turk Maarif Schools, Islamabad<br />
+      Bachelor's in Computer Science — Effat University
+    </p>
+
+    <p>
+      I’ve designed projects for students, making them visually appealing and
+      easy to use. I also completed a red teaming internship with AI Astrolabe,
+      gaining exposure to cybersecurity and real-world problem-solving.
+    </p>
+
+    <h3>Skills</h3>
+    <ul class="skills">
+      <li>Data Analysis</li>
+      <li>Power BI</li>
+      <li>Tableau</li>
+      <li>Canva Design</li>
+      <li>Basic Web Technologies</li>
+    </ul>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <p>Coming soon — space reserved for your future projects.</p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:saraimran1019@gmail.com">saraimran1019@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/saraimran-dev" target="_blank">github.com/saraimran-dev</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/saraimran1019" target="_blank">linkedin.com/in/saraimran1019</a></p>
+  </section>
+
 </body>
 </html>
+
 
 
