@@ -1,163 +1,150 @@
-/* GLOBAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+/* =========================
+   Portfolio Light Theme SCSS
+========================= */
 
+/* ---------- Global Styles ---------- */
 body {
-  background-color: #121212;
-  color: #f0f0f0;
-  line-height: 1.6;
+    background: #ffffff;      // light background
+    color: #333333;           // dark text
+    font-family: "lora-regular", serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
 }
 
-/* NAVBAR */
+a, a:visited {
+    color: #333333;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #cc005f;          // accent color for hover
+}
+
+/* ---------- Header ---------- */
 header {
-  background-color: #1e1e1e;
-  padding: 20px 40px;
+    .top-bar {
+        background: #f8f8f8;  // light gray header
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    nav a {
+        color: #333333;
+    }
+
+    nav a:hover {
+        color: #cc005f;
+    }
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ---------- Buttons ---------- */
+.button.button-primary {
+    background: #cc005f;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #ff6f61;
+.button.button-primary:hover {
+    background: #ff3399;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+/* ---------- Sections ---------- */
+section {
+    padding: 10rem 0;
 }
 
-.nav-links a {
-  color: #ccc;
-  text-decoration: none;
-  transition: 0.3s;
+/* ---------- About / Portfolio ---------- */
+#about, #portfolio {
+    background: #f9f9f9;   // very light gray for sections
+    color: #333333;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-  color: #ff6f61;
+/* ---------- Projects Section ---------- */
+#projects {
+    background: #ffffff;
+    padding: 10rem 0;
+
+    .section-intro {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        h1 {
+            font-family: "poppins-bold", sans-serif;
+            font-size: 3rem;
+            color: #333333;
+        }
+
+        p.lead {
+            font-size: 1.8rem;
+            color: #555555;
+        }
+    }
+
+    .project-item {
+        background: #f8f8f8;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        h4 {
+            font-family: "poppins-bold", sans-serif;
+            font-size: 1.8rem;
+            color: #333333;
+        }
+
+        p {
+            font-family: "lora-regular", serif;
+            font-size: 1.5rem;
+            color: #555555;
+        }
+    }
 }
 
-/* HERO SECTION */
-.hero {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 40px;
+/* ---------- Skills / Bars ---------- */
+.skill-bars li {
+    background: #e1e1e1;        // light gray bar
 }
 
-.hero-text {
-  max-width: 700px;
+.skill-bars li .progress {
+    background: #cc005f;        // accent color
 }
 
-.hero-text h1 {
-  font-size: 3.2rem;
-  color: #ff6f61;
+/* ---------- Preloader ---------- */
+#preloader {
+    background: #ffffff;
 }
 
-.hero-text h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+#loader:before {
+    border-left-color: #cc005f;
 }
 
-.hero-text h3 {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #aaa;
+/* ---------- Intro Section ---------- */
+#intro {
+    background: #f8f8f8 url(../images/light-bg.jpg) no-repeat center bottom;
 }
 
-.hero-text p {
-  margin-bottom: 30px;
+.intro-overlay {
+    background: #ffffff;
+    opacity: 0.5;
 }
 
-.buttons .btn {
-  padding: 12px 24px;
-  margin-right: 15px;
-  background-color: #ff6f61;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
-}
+/* ---------- Footer ---------- */
+footer {
+    background: #f8f8f8;
+    color: #333333;
+    border-top: 1px solid #e1e1e1;
 
-.buttons .btn:hover {
-  background-color: #e85c50;
-}
-
-.btn.outline {
-  background: transparent;
-  border: 2px solid #ff6f61;
-  color: #ff6f61;
-}
-
-/* QUOTE */
-.quote {
-  padding: 50px;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ccc;
-}
-
-/* ABOUT */
-.about {
-  padding: 60px 40px;
-}
-
-.about h2 {
-  color: #ff6f61;
-  margin-bottom: 15px;
-}
-
-.skills {
-  list-style: none;
-  margin-top: 15px;
-}
-
-.skills li {
-  background: #1e1e1e;
-  padding: 8px 12px;
-  margin: 5px 0;
-  border-radius: 5px;
-  width: fit-content;
-}
-
-/* PROJECTS */
-.projects {
-  padding: 60px 40px;
-}
-
-.projects h2 {
-  color: #ff6f61;
-  margin-bottom: 15px;
-}
-
-/* CONTACT */
-.contact {
-  padding: 60px 40px;
-}
-
-.contact h2 {
-  color: #ff6f61;
-  margin-bottom: 15px;
-}
-
-.contact a {
-  color: #ffcc70;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  color: #ff6f61;
+    a:hover {
+        color: #cc005f;
+    }
 }
 
 
